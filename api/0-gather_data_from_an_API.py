@@ -23,7 +23,7 @@ if __name__ == '__main__':
     todo_req = requests.get(todo_url)
     todo_data = json.loads(todo_req.text)
     todo_count = len(todo_data)
-    todo_completed = len([d for d in todo_data if d.get('completed') == True])
+    todo_completed = len([d for d in todo_data if d.get('completed')])
     first_line = 'Employee {} is done with tasks({}/{}):'.format(
         emp_name,
         todo_completed,
