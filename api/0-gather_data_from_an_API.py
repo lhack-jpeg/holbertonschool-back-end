@@ -16,9 +16,9 @@ if __name__ == '__main__':
     user_data = requests.get(user_info_url).json()
     emp_name = user_data.get('name')
 
-    todo_url_req = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
+    todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
         user_id)
-    todo_data = requests.get(todo_url_req).json()
+    todo_data = requests.get(todo_url).json()
     todo_count = len(todo_data)
     todo_completed = [d for d in todo_data if d.get('completed')]
     len_completed = len(todo_completed)
