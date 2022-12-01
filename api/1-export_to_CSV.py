@@ -26,8 +26,6 @@ if __name__ == '__main__':
     todo_data = json.loads(todo_req.read())
     list_of_todos = []
 
-    fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-
     with open(file_name, 'w', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter=',', quotechar='"',
                             quoting=csv.QUOTE_ALL)
