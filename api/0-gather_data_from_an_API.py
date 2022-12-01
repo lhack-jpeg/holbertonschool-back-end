@@ -16,7 +16,7 @@ if __name__ == '__main__':
     )
     user_req = requests.get(user_info_url)
     user_data = json.loads(user_req.text)
-    emp_name = user_data.get('name').strip()
+    emp_name = user_data['name']
 
     todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
         user_id)
