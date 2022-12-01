@@ -24,7 +24,6 @@ if __name__ == '__main__':
         user_id)
     todo_req = urllib.request.urlopen(todo_url)
     todo_data = json.loads(todo_req.read())
-    list_of_todos = []
 
     with open(file_name, 'w', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter=',', quotechar='"',
